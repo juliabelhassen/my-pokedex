@@ -1,5 +1,4 @@
 import PokemonCard from "./components/PokemonCard"
-import Salameche from "./components/Salameche"
 
 function App() {
   return (
