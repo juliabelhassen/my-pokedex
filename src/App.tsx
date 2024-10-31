@@ -2,13 +2,13 @@ import PokemonCard from "./components/PokemonCard";
 
 const pokemonList = [
   {
-    name: "bulbasaur",
+    name: "Bulbasaur",
     imgSrc:
       "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
   },
 
   {
-    name: "mew",
+    name: "Mew",
     imgSrc: "",
   },
 ];
@@ -18,8 +18,7 @@ function App() {
     <>
       <main>
         <h3>POKEMON</h3>
-
-        <PokemonCard pokemon={pokemonList[0]} />
+        <PokemonCard {...pokemonList[0]}/>
       </main>
     </>
   );
