@@ -4,6 +4,7 @@ imgSrc: string;
 }
 
 function PokemonCard({ name , imgSrc } : pokemonId) {
+
   return (
     <>
       <figure>
@@ -14,6 +15,7 @@ function PokemonCard({ name , imgSrc } : pokemonId) {
         /> 
         : <p>This is supposed to be a Pokemon</p>}
         <figcaption>{name}</figcaption>
+        
       </figure>
     </>
   );
