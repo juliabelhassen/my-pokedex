@@ -7,7 +7,7 @@ const pokemonList = [
 
   {
     name: "Mew",
-    imgSrc: "",
+    imgSrc: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
   },
   {
     name: "charmander",
@@ -26,4 +26,4 @@ const pokemonList = [
   },
 ];
 
-export default Array;
+export default pokemonList;

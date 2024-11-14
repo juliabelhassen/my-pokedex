@@ -1,6 +1,6 @@
 interface pokemonId {
 name: string;
-imgSrc: string; 
+imgSrc: string;
 }
 
 function PokemonCard({ name , imgSrc } : pokemonId) {
@@ -9,13 +9,9 @@ function PokemonCard({ name , imgSrc } : pokemonId) {
     <>
       <figure>
         {imgSrc ? 
-        <img 
-        src={imgSrc} 
-        alt={'This is a Pokemon'} 
-        /> 
+        <img src={imgSrc} alt={`Representation of ${name}`}/> 
         : <p>This is supposed to be a Pokemon</p>}
-        <figcaption>{name}</figcaption>
-        
+        <button type="button">{name}</button>
       </figure>
     </>
   );

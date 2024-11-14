@@ -1,54 +1,42 @@
 import PokemonCard from "./PokemonCard";
 import './General.css'
 import { useState } from "react";
+import pokemonList from "./Array";
 
 function App() {
 
-  const pokemonList = [
-    {
-      name: "Bulbasaur",
-      imgSrc:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
-    },
-  
-    {
-      name: "Mew",
-      imgSrc: "",
-    },
-    {
-      name: "charmander",
-      imgSrc:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/4.png",
-    },
-    {
-      name: "squirtle",
-      imgSrc:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
-    },
-    {
-      name: "pikachu",
-      imgSrc:
-        "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/25.png",
-    },
-  ];
-
   const [pokemonIndex, setPokemonIndex] = useState(0);
 
-  const handleNext = () => {
-    setPokemonIndex((prevIndex) => (prevIndex + 1) % pokemonList.length);
+  const goNext = () => {
+    if (pokemonIndex < pokemonList.length - 1) {
+      setPokemonIndex(pokemonIndex + 1);
+    }
   };
 
-  const handlePrevious = () => {
-    setPokemonIndex((prevIndex) => (prevIndex - 1 + pokemonList.length) % pokemonList.length);
+  const goPrevious = () => {
+    if (pokemonIndex > 0) {
+      setPokemonIndex(pokemonIndex - 1);
+    }
   };
 
+  const isNextDisabled = pokemonIndex >= pokemonList.length - 1;
+  const isPreviousDisabled = pokemonIndex <= 0;
+
+  // Est ce qu'il y a un pokemon Next ? Si oui go Next, si non Disable button
+  // Est ce qu'il y a un pokemon previous ? Si oui go Previous, si non Disable button
+  // {isPokemon ? disable(button) TRUE : goNext} ?
+  
   return (
     <>
       <main>
         <h3>POKEMON</h3>
         <PokemonCard {...pokemonList[pokemonIndex]}/>
-        <button type="button" onClick={handleNext}>Suivant</button>
-        <button type="button" onClick={handlePrevious}>Precedent</button>
+        <button type="button" onClick={goNext} disabled={isNextDisabled}>
+          Suivant
+        </button>
+        <button type="button" onClick={goPrevious} disabled={isPreviousDisabled}>
+          Précédent
+        </button>
       </main>
     </>
   );
