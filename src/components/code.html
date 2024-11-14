@@ -1,0 +1,13 @@
+const [pokemonIndex, setPokemonIndex] = useState(0);
+
+
+const handleNext = () => { setPokemonIndex((prevIndex) => (prevIndex + 1) % pokemonList.length);
+ };
+
+const handlePrevious = () => {
+   setPokemonIndex((prevIndex) => (prevIndex - 1 + pokemonList.length) % pokemonList.length);
+ };
+
+ <PokemonCard {...pokemonList[pokemonIndex]}/>
+  <button type="button" onClick={handleNext}>Suivant</button>
+  <button type="button" onClick={handlePrevious}>Precedent</button>  
