@@ -1,8 +1,8 @@
 interface pokemonId {
-name: string;
-imgSrc: string;
-}
-
+  name: string;
+  imgSrc: string;
+  }
+  
 function PokemonCard({ name , imgSrc } : pokemonId) {
 
   return (

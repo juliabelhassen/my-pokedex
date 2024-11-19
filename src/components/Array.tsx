@@ -17,7 +17,7 @@ const pokemonList = [
   {
     name: "squirtle",
     imgSrc:
-      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/7.png",
+      "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/17.png",
   },
   {
     name: "pikachu",
