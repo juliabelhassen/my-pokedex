@@ -6,8 +6,8 @@ const pokemonList = [
   },
 
   {
-    name: "Mew",
-    imgSrc: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/1.png",
+    name: "Chenipan",
+    imgSrc: "https://raw.githubusercontent.com/PokeAPI/sprites/master/sprites/pokemon/other/official-artwork/10.png",
   },
   {
     name: "charmander",
